@@ -1,0 +1,13 @@
+.block1 {
+  animation: block1 2s forwards infinite alternate-reverse;
+}
+
+@keyframes block1 {
+  0% {
+    transform: translateY(-200px);
+  }
+
+  100% {
+    transform: translateY(200px);
+  }
+}

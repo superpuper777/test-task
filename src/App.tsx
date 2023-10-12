@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Button from './components/Button';
+import Block1 from './components/Block1';
+import Block2 from './components/Block2';
+import Circle from './components/Circle';
 
 function App() {
+  const [circleVisible, setCircleVisible] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Circle circleVisible={circleVisible} />
+      <div className="wrapper">
+        <Block1 />
+        <Block2 />
+      </div>
+      <Button
+        circleVisible={circleVisible}
+        setCircleVisible={setCircleVisible}
+      />
     </div>
   );
 }
